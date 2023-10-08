@@ -1,0 +1,43 @@
+.wrapper {
+    flex: 1 1 auto;
+    padding: 45px 0;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column;
+    height: 100%;
+
+    .img {
+        display: flex; justify-content: center;
+        width: 100%; max-width: 100%;
+        margin: 0 0 30px;
+
+        svg {
+            font-size: 100px;
+        }
+    }
+
+    .title {
+        font-size: 19px;
+        font-weight: 500;
+        color: #000;
+        text-align: center;
+        margin: 0 0 10px;
+    }
+
+    .subTitle {
+        display: inline-block;
+        font-size: 14px;
+        color: #4f4f4f;
+        text-align: center;
+        line-height: 17px;
+        margin: 0 0 30px;
+    }
+
+    .btn {
+        display: flex; justify-content: center;
+
+        button {
+            font-weight: 300;
+            font-size: 13px;
+        }
+    }
+}

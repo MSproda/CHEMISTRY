@@ -1,0 +1,15 @@
+.btn {
+    background-color: #bb2649; border-radius: 10px;
+    box-shadow: 0 0 5px 1px rgba(240, 84, 84, 0.4);
+    padding: 10px 25px;
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    transition: all .3s ease;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #e01646; 
+        }
+    }
+}

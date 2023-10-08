@@ -1,0 +1,38 @@
+.btn {
+    position: fixed;
+    height: 50px;
+    width: 100%; max-width: 100%;
+    bottom: 0px; left: 0;
+    background-color: #bb2649;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: 0 0 7px 1px #f0545494;
+    padding: 6px 0;
+    z-index: 10;
+    transition: all .2s ease;
+
+    @media (min-width: 767.98px) {
+        position: static;
+        border-radius: 10px;
+    }
+
+    .btnName {
+        width: 100%; max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .orderInfo {
+        display: flex; align-items: flex-end; justify-content: center;
+        font-weight: 400;
+        font-size: 12px;
+
+        span {
+            margin: 0 2px;
+        }
+    }
+}
