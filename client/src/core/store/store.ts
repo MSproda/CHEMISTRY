@@ -10,17 +10,19 @@ import {
 import storage from 'redux-persist/lib/storage'
 
 import cartSlice from "./basket/basket.slice"
-import modalsSlice from './modals/modals.slice'
+import promotionsSlice from './promotions/promotions.slice'
+import productsSlice from './products/products.slice'
 
 const persistConfig = {
     key: 'CHERRY',
     storage,
-    whitelist: ['cart', 'favorites', 'notifications', 'search']
+    whitelist: ['cart']
 }
 
 const rootReducer = combineReducers({
     cart: cartSlice,
-    modals: modalsSlice,
+    promotions: promotionsSlice,
+    products: productsSlice
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

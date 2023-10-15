@@ -25,9 +25,9 @@ export const ProductViewBasketBtn: FC<IBasketBtn> = ({ price, active, handleClic
     }
 
     return <div className={s.wrapper}>
-        <div onClick={() => fnAddToBasket()} className={isActive ? `${s.content} ${s.contentActive}` : `${s.content}`}>
+        <div onClick={() => fnAddToBasket()} className={!isActive ? `${s.content} ${s.contentActive}` : `${s.content}`}>
             {
-                isActive ? <span>В корзине</span> : <div>
+                active ? <span>В корзине</span> : <div>
                     <span className={s.text}>В корзину</span>
                     <span className={s.price}>{price} ₽</span>
                 </div>

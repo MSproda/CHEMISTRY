@@ -1,0 +1,12 @@
+.homeSlider{
+    position: relative;
+
+    .keen-slider {
+        padding: 15px 0px;
+        
+        .keen-slider__slide {
+            overflow: visible !important;
+            border-radius: 10px;
+        } 
+    }
+}

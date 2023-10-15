@@ -10,8 +10,9 @@ import { useFormattingPrice } from '@/core/helpers/price'
 import { useAppDispatch } from '@/core/hooks/store/use-typed-dispatch'
 import { setToggleBasketProduct } from '@/core/store/basket/basket.slice'
 
-export const ProductViewModal: React.FC<TypeSliderImagesModal> = ({ open, onClose, data }) => {
+export const ProductViewModal: React.FC<TypeSliderImagesModal> = ({ open, onClose, data, basketIds }) => {
     const dispatch = useAppDispatch()
+    console.log(basketIds)
 
     const { active } = useModalOptions(open, onClose)
     const { result: $price } = useFormattingPrice(data?.price)
@@ -33,7 +34,7 @@ export const ProductViewModal: React.FC<TypeSliderImagesModal> = ({ open, onClos
                         <div className={s.image}>
                             <Image
                                 fill={true}
-                                objectFit="cover"
+                                objectFit="contain"
                                 src={data.image}
                                 sizes='(max-width: 768px) 480px'
                                 alt="product"
@@ -42,12 +43,23 @@ export const ProductViewModal: React.FC<TypeSliderImagesModal> = ({ open, onClos
                             />
                         </div>
 
-                        <div className={s.button}>
-                            <ProductViewBasketBtn
-                                price={$price && $price}
-                                handleClick={handleToggleBasket}
-                            />
-                        </div>
+                        {
+                            basketIds?.find(item => +item.product.id === +data.id)
+                                ? <div className={s.button} onClick={(e) => e.stopPropagation()}>
+                                    <ProductViewBasketBtn
+                                        handleClick={handleToggleBasket}
+                                        price={$price}
+                                        active={true}
+                                    />
+                                </div>
+                                : <div className={s.button} onClick={(e) => e.stopPropagation()}>
+                                    <ProductViewBasketBtn
+                                        handleClick={handleToggleBasket}
+                                        price={$price}
+                                        active={false}
+                                    />
+                                </div>
+                        }
                     </div>
                 </Portal>
             )}

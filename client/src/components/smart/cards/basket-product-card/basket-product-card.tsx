@@ -28,6 +28,7 @@ export const BasketProductCard: React.FC<Props> = ({ data, handleBasketToggleCli
                 <div className={s.img}>
                     <Image
                         fill={true}
+                        objectFit='scale-down'
                         src={product.image}
                         sizes='(max-width: 768px) 210px'
                         alt="product"

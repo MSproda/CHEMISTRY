@@ -1,0 +1,30 @@
+.dots {
+    display: flex;
+    justify-content: center;
+
+    .dot {
+        border: none;
+        width: 10px; height: 10px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 50%;
+        margin: 0 5px;
+        padding: 5px;
+        cursor: pointer;
+
+        @media (min-width: 767.98px) {
+            width: 12px; height: 12px;
+        }
+
+        @media (min-width: 991.98px) {
+            width: 14px; height: 14px;
+        }
+    }
+    
+    .dot:focus {
+        outline: none;
+    }
+    
+    .active {
+        background-color: #fff;
+    }
+}

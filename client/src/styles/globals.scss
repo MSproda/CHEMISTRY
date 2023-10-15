@@ -22,7 +22,7 @@ $maxWidthContainer: 1500px;
 $containerPadding: 10px;
 
 body {
-	background-color: #f1f1f1;
+	background-color: #fff;
 	font-family: inherit;
 	color: $mainColor;
 	font-size: $fontSize;
@@ -70,4 +70,6 @@ body {
 
 // =================================== Config ==============================================
 @import './config/null.scss';
-@import './common.scss'
+@import './common.scss';
+// =================================== Sliders ==============================================
+@import './sliders/home-promotions-slider.scss'

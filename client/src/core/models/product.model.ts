@@ -27,4 +27,6 @@ export interface IProduct {
     image: string,
     price: number,
     name: string,
+    discount?: number,
+    promotion?: number
 }

@@ -1,5 +1,5 @@
 export const useFormattingPrice = (price: number) => {
-    const result = price && price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
+    const result = price && price.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
     return { result }
 }
 
